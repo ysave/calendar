@@ -5,6 +5,7 @@ async function registerUser(event){
     event.preventDefault()
     const username = document.getElementById('name').value
     const password = document.getElementById('password').value
+    const email = document.getElementById('email').value
 
     const result = await fetch('/api/register', {
         method: 'POST',
@@ -13,7 +14,8 @@ async function registerUser(event){
         },
         body: JSON.stringify({
             username,
-            password
+            password,
+            email
         })
     }).then(res => res.json())
 
