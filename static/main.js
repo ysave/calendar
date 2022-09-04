@@ -26,7 +26,7 @@ form.addEventListener('submit', login)
 
 async function login(event) {
     event.preventDefault()
-    const username = document.getElementById('username').value
+    const username = document.getElementById('name').value
     const password = document.getElementById('password').value
 
     const result = await fetch('/api/login', {
