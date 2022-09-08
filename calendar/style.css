@@ -2,7 +2,7 @@
 :root{
     --bg-color: #313131;
     --grid-color: #282828;
-    --time-color: #ffffff;
+    --time-color: #a2a2a2;
     --slot-hover-color: #292929;
     --shadow-color: rgba(0,0,0,0.3);
     --font-color: #ffffff;
@@ -120,6 +120,15 @@ header{
     border-top: 1px solid var(--grid-color);
 }
 
+.dayDisplay{
+    font-size: 15px;
+    color: var(--time-color);
+}
+
+.day.currentDay .columnHeader{
+    background-color: var(--slot-hover-color);
+}
+
 /* slots */
 .slots{
     position: relative;
@@ -132,6 +141,14 @@ header{
 
 .time{
     font-size: 14px;
+}
+.time:hover{
+    color: var(--color-purple);
+}
+
+.time.currentTime {
+    background-color: var(--slot-hover-color);
+    color: var(--font-color);
 }
 
 .slot:hover {
