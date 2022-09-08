@@ -1,0 +1,36 @@
+/* general styling */
+:root{
+    --grid-color: #282828;
+    --time-color: #ffffff;
+    --slot-hover-color: #313131;
+    --shadow-color: rgba(0,0,0,0.3);
+    --font-color: #AD6EDD;
+    --color-purple: #AD6EDD;
+    --color-red: #FF8B8B;
+    --color-orange: #FF9980;
+    --color-yellow: #F5FFA2;
+    --color-green: #AAFFA2;
+    --color-blue: #9FD1FF;
+    --slotHeight: 30px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--font-color);
+}
+
+input, textarea{
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: none;
+}
+
+
+
