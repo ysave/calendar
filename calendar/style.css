@@ -5,7 +5,7 @@
     --time-color: #ffffff;
     --slot-hover-color: #303030;
     --shadow-color: rgba(0,0,0,0.3);
-    --font-color: #AD6EDD;
+    --font-color: #ffffff;
     --color-purple: #AD6EDD;
     --color-red: #FF8B8B;
     --color-orange: #FF9980;
@@ -46,7 +46,7 @@ header{
 
 .header h1 {
     cursor: pointer;
-    color: var(--color-green);
+    color: var(--color-purple);
     font-weight: 400;
 }
 
@@ -58,8 +58,26 @@ header{
 }
 
 .header ion-icon:hover{
-    color: var(--font-color);
-    border-color: var(--font-color);
+    color: var(--color-purple);
+    border-color: var(--color-purple);
 }
 
+/* controls */
+.weekControls{
+    position: absolute;
+    left: 20px;
+    font-size: 22px;
+}
+
+.generalControls{
+    position: absolute;
+    right: 20px;
+}
+
+.generalControls ion-icon{
+    line-height: 25px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
 
