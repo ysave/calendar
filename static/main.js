@@ -21,8 +21,8 @@ async function registerUser(event){
 
     console.log(result)
 }
-const form = document.getElementById('login-form')
-form.addEventListener('submit', login)
+const loginform = document.getElementById('login-form')
+loginform.addEventListener('submit', login)
 
 async function login(event) {
     event.preventDefault()
