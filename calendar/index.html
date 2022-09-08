@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyCalendar</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="weekControls">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+                <span id="weekDisplay">
+                    <span id="weekStartDisplay"></span>
+                    -
+                    <span id="weekEndDisplay"></span>
+                </span>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+            <h1>MyCalendar</h1>
+            <div class="generalControls">
+                <ion-icon id="addBtn" name="add-outline"></ion-icon>
+                <ion-icon id="trashBtn" name="trash-outline"></ion-icon>
+
+            </div>
+        </header>
+        <section id="calendar">
+            <div class="dayTime"></div>
+            <div data-name="Monday" data-dayIndex="0" class="day"></div>
+            <div data-name="Tuesday" data-dayIndex="1" class="day"></div>
+            <div data-name="Wednesday" data-dayIndex="2" class="day"></div>
+            <div data-name="Thursday" data-dayIndex="3" class="day"></div>
+            <div data-name="Friday" data-dayIndex="4" class="day"></div>
+            <div data-name="Saturday" data-dayIndex="5" class="day"></div>
+            <div data-name="Sunday" data-dayIndex="6" class="day"></div>
+        </section>
+    </main>
+
+    <script src="main.js" type="module"></script>
+
+</body>
+</html>
