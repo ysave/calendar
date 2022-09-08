@@ -1,8 +1,9 @@
 /* general styling */
 :root{
+    --bg-color: #313131;
     --grid-color: #282828;
     --time-color: #ffffff;
-    --slot-hover-color: #313131;
+    --slot-hover-color: #303030;
     --shadow-color: rgba(0,0,0,0.3);
     --font-color: #AD6EDD;
     --color-purple: #AD6EDD;
@@ -23,6 +24,7 @@
 body{
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: var(--font-color);
+    background: var(--bg-color);
 }
 
 input, textarea{
@@ -32,5 +34,32 @@ input, textarea{
     border: none;
 }
 
+/* header */
+header{
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    cursor: pointer;
+    color: var(--color-green);
+    font-weight: 400;
+}
+
+.header ion-icon{
+    cursor: pointer;
+    margin: 0px 5px;
+    color: var(--time-color);
+    transition: all 80ms linear;
+}
+
+.header ion-icon:hover{
+    color: var(--font-color);
+    border-color: var(--font-color);
+}
 
 
