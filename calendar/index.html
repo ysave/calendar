@@ -10,13 +10,13 @@
     <main>
         <header class="header">
             <div class="weekControls">
-                <ion-icon name="chevron-back-outline"></ion-icon>
+                <ion-icon id="prevWeekBtn" name="chevron-back-outline"></ion-icon>
                 <span id="weekDisplay">
                     <span id="weekStartDisplay"></span>
                     -
                     <span id="weekEndDisplay"></span>
                 </span>
-                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <ion-icon id="nextWeekBtn" name="chevron-forward-outline"></ion-icon>
             </div>
             <h1>MyCalendar</h1>
             <div class="generalControls">
@@ -25,7 +25,7 @@
 
             </div>
         </header>
-        <section id="calendar">
+        <section id="calendar" style="display: none">
             <div class="dayTime"></div>
             <div data-name="Monday" data-dayIndex="0" class="day"></div>
             <div data-name="Tuesday" data-dayIndex="1" class="day"></div>
@@ -35,8 +35,48 @@
             <div data-name="Saturday" data-dayIndex="5" class="day"></div>
             <div data-name="Sunday" data-dayIndex="6" class="day"></div>
         </section>
+
+        <form id="eventModal">
+            <h2 id="modalTitle"></h2>
+            <label for="title" class="descriptor">Title</label>
+            <div>
+                <input type="text" required id="eventTitle" name="title" class="shortInput">
+            </div>
+            <label for="date" class="descriptor">Date</label>
+            <div>
+                <input type="date" required id="eventDate" name="date" class="shortInput">
+            </div>
+            <label for="time" class="descriptor">Time</label>
+            <div>
+                <input type="time" required id="eventStart" name="time" class="shortInput">
+                -
+                <input type="time" required id="eventEnd" name="time" class="shortInput">
+            </div>
+            <label for="description" class="descriptor">Description</label>
+            <div>
+                <textarea name="description" id="eventDescription" cols="30" rows="10"></textarea>
+            </div>
+            <label for="tag" class="descriptor">Tag</label>
+            <div id="colors">
+                <input type="button" name="tag" class="label color-purple" data-color="purple" value="Private">
+                <input type="button" name="tag" class="label color-red" data-color="red" value="Important">
+                <input type="button" name="tag" class="label color-orange" data-color="orange" value="Normal">
+                <input type="button" name="tag" class="label color-yellow" data-color="yellow" value="Examen">
+                <input type="button" name="tag" class="label color-green" data-color="green" value="Homework">
+                <input type="button" name="tag" class="label color-blue" data-color="blue" value="Event">
+            </div>
+            <div id="eventControls">
+                <ion-icon id="saveBtn" name="save-outline"></ion-icon>
+                <ion-icon id="cancelBtn" name="ban-outline"></ion-icon>
+                <ion-icon id="copyBtn" name="copy-outline"></ion-icon>
+                <ion-icon id="deleteBtn" name="trash-outline"></ion-icon>
+            </div>
+            <div id="errors"></div>
+        </form>
+
     </main>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="main.js" type="module"></script>
 
 </body>
